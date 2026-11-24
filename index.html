@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#211632" />
+  <title>DOPAMINE</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div><div class="brand">DOPAMINE <span>♥</span></div><small>مرکز بازی و سرگرمی</small></div>
+      <div class="avatar" id="avatar">D</div>
+    </header>
+    <main>
+      <section class="welcome panel">
+        <p class="muted" id="greeting">خوش اومدی 👋</p>
+        <h1 id="username">بازیکن</h1>
+        <div class="stats">
+          <div><small>امتیاز من</small><strong id="points">۰ ⭐</strong></div>
+          <div><small>رتبه من</small><strong id="rank">— 🏆</strong></div>
+        </div>
+      </section>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="home">خانه</button>
+        <button class="tab" data-tab="play">بازی</button>
+        <button class="tab" data-tab="missions">مأموریت‌ها</button>
+        <button class="tab" data-tab="leaders">رتبه‌بندی</button>
+        <button class="tab" data-tab="profile">پروفایل</button>
+      </nav>
+
+      <section class="view active" id="home">
+        <div class="section-title"><h2>شروع کن</h2><span>🎮</span></div>
+        <button class="primary wide" id="home-play">شروع مسابقه</button>
+        <div class="section-title"><h2>مأموریت‌های امروز</h2><span>🎯</span></div>
+        <div id="home-missions" class="stack"></div>
+      </section>
+
+      <section class="view" id="play">
+        <div class="section-title"><h2>مسابقه اطلاعات عمومی</h2><span>🧠</span></div>
+        <div class="panel quiz-card">
+          <div class="quiz-meta"><span id="question-count">آماده‌ای؟</span><span id="quiz-score">۰ امتیاز</span></div>
+          <h3 id="question">برای شروع مسابقه دکمه زیر را بزن.</h3>
+          <div id="answers" class="stack"></div>
+          <button class="primary wide" id="start-quiz">شروع بازی</button>
+          <p class="muted tiny" id="quiz-feedback">هر پاسخ درست ۱۰ امتیاز دارد.</p>
+        </div>
+      </section>
+
+      <section class="view" id="missions">
+        <div class="section-title"><h2>مأموریت‌ها</h2><span>🎯</span></div>
+        <div id="missions-list" class="stack"></div>
+      </section>
+
+      <section class="view" id="leaders">
+        <div class="section-title"><h2>برترین بازیکنان</h2><span>🏆</span></div>
+        <div id="leader-list" class="stack"></div>
+      </section>
+
+      <section class="view" id="profile">
+        <div class="section-title"><h2>پروفایل من</h2><span>👤</span></div>
+        <div class="panel profile-card">
+          <div class="avatar big" id="profile-avatar">D</div>
+          <h2 id="profile-name">بازیکن</h2>
+          <p class="muted" id="profile-id">شناسه تلگرام: —</p>
+          <div class="profile-points"><strong id="profile-points">۰</strong><small>امتیاز کل</small></div>
+        </div>
+        <p class="muted tiny center">اطلاعات حساب از تلگرام دریافت می‌شود.</p>
+      </section>
+    </main>
+    <footer>ساخته‌شده برای سرگرمی · DOPAMINE</footer>
+    <div class="toast" id="toast" role="status"></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
